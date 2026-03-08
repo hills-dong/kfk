@@ -2824,7 +2824,9 @@
       "q_en": "You said you'd give kind reminders to people of 2019, but I haven't seen any?",
       "a_en": "If nothing unexpected happens, I'll stay until December 31, 2019, the last day, and witness what's about to happen together with you.",
       "year": 2019,
-      "status": "pending"
+      "status": "verified",
+      "verdict_zh": "KFK声称会留到2019年12月31日离去。其豆瓣账号确实在2019年底停止了活动，此后再未发帖。",
+      "verdict_en": "KFK claimed he would stay until December 31, 2019 before departing. His Douban account indeed ceased activity by the end of 2019, with no further posts since."
     },
     {
       "id": 99,
