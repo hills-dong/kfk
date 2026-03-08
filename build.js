@@ -5,7 +5,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const TEMPLATES_DIR = path.join(ROOT, 'templates');
-const DIST_DIR = path.join(ROOT, 'dist');
+const DIST_DIR = path.join(ROOT, 'docs');
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -265,7 +265,7 @@ function buildSite(siteId) {
   fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap, 'utf8');
   console.log(`  Generated: sitemap.xml`);
 
-  console.log(`Done: dist/${siteId}/`);
+  console.log(`Done: docs/${siteId}/`);
 }
 
 // ---------------------------------------------------------------------------
@@ -287,4 +287,4 @@ if (arg === '--all') {
 
 console.log('\nBuild complete!');
 console.log('Run `node server.js` to preview at http://localhost:3000/kfk/');
-console.log('Output in dist/');
+console.log('Output in docs/ — GitHub Pages serves from /docs on main branch');
