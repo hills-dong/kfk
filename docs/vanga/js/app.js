@@ -113,8 +113,8 @@ function renderList(searchOnly) {
             <div class="prophecy-header-title"><span class="prophecy-id">#${p.id}</span> ${pq(p)}</div>
             <div class="prophecy-header-tags">
               <span class="prophecy-cat">${cat.icon} ${cat[catKey]}</span>
-              ${pubDate ? `<span class="prophecy-date">${pubDate}</span>` : ''}
-              ${p.year ? `<span class="prophecy-year-tag">${p.year}</span>` : ''}
+              ${pubDate ? `<span class="prophecy-date">${lang === 'zh' ? '发布' : 'Pub'}: ${pubDate}</span>` : ''}
+              ${p.year ? `<span class="prophecy-year-tag">${lang === 'zh' ? '预言' : 'Pred'}: ${p.year}</span>` : ''}
               ${st ? `<span class="status-badge ${st.cls}">${st.icon} ${st[catKey]}</span>` : ''}
             </div>
           </div>
