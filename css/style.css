@@ -449,27 +449,16 @@ main {
 
 .prophecy-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 4px 8px;
   margin-bottom: 8px;
-  flex-wrap: nowrap;
-}
-
-.prophecy-header-left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
 }
 
 .prophecy-header-title {
   font-size: 13px;
   color: var(--text);
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 100%;
 }
 
 .prophecy-header-tags {
@@ -477,7 +466,6 @@ main {
   align-items: center;
   gap: 6px;
   margin-left: auto;
-  flex-shrink: 0;
 }
 
 .prophecy-id {
@@ -786,27 +774,6 @@ footer a {
 
   .hit-rate-box {
     padding: 5px 12px;
-  }
-
-  .prophecy-header {
-    flex-wrap: wrap;
-  }
-
-  .prophecy-header-title {
-    order: 1;
-    width: 100%;
-    flex-basis: 100%;
-    white-space: normal;
-    overflow: visible;
-  }
-
-  .prophecy-header-left {
-    order: 2;
-  }
-
-  .prophecy-header-tags {
-    order: 3;
-    margin-left: 0;
   }
 }
 

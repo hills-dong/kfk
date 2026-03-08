@@ -100,10 +100,7 @@ function renderList(searchOnly) {
       itemsHtml += `
         <div class="prophecy-item${st ? ' ' + st.cls : ''}">
           <div class="prophecy-header">
-            <div class="prophecy-header-left">
-              <span class="prophecy-id">#${p.id}</span>
-            </div>
-            <span class="prophecy-header-title">${pq(p)}</span>
+            <div class="prophecy-header-title"><span class="prophecy-id">#${p.id}</span> ${pq(p)}</div>
             <div class="prophecy-header-tags">
               <span class="prophecy-cat">${cat.icon} ${cat[catKey]}</span>
               ${p.year ? `<span class="prophecy-year-tag">${p.year}</span>` : ''}
