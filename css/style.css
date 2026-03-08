@@ -378,7 +378,7 @@ main {
   border: 1px solid var(--border2);
   border-radius: 3px;
   padding: 5px 10px;
-  font-size: 13px;
+  font-size: 16px;
   color: var(--text);
   outline: none;
 }
@@ -394,7 +394,14 @@ main {
 .filter-bar {
   display: flex;
   gap: 3px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.filter-bar::-webkit-scrollbar {
+  display: none;
 }
 
 .filter-btn {
@@ -768,12 +775,17 @@ footer a {
     gap: 12px;
   }
 
+  .hit-rate-num {
+    font-size: 22px;
+  }
+
+  .hit-rate-label,
+  .hit-rate-note {
+    font-size: 10px;
+  }
+
   .hit-rate-box {
-    margin-left: 0;
-    border-left: none;
-    border-top: 1px solid var(--border);
-    padding-top: 10px;
-    width: 100%;
+    padding: 5px 12px;
   }
 
   .prophecy-header {
@@ -781,11 +793,20 @@ footer a {
   }
 
   .prophecy-header-title {
-    order: 3;
+    order: 1;
     width: 100%;
     flex-basis: 100%;
     white-space: normal;
     overflow: visible;
+  }
+
+  .prophecy-header-left {
+    order: 2;
+  }
+
+  .prophecy-header-tags {
+    order: 3;
+    margin-left: 0;
   }
 }
 
