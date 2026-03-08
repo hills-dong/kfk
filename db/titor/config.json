@@ -1,0 +1,65 @@
+{
+  "siteId": "titor",
+  "answererName": "John Titor",
+  "publishDate": "2000-11-02",
+  "baseUrl": "https://pre.hilife.me/titor",
+  "defaultLang": "zh",
+  "languages": ["zh", "en"],
+  "meta": {
+    "zh": {
+      "htmlLang": "zh-CN",
+      "title": "约翰·提托预言全集 - 来自2036年的时间旅行者预言与验证 | John Titor Predictions",
+      "description": "约翰·提托（John Titor）于2000-2001年在美国论坛自称来自2036年的时间旅行者，留下了关于美国内战、核战争、时间机器等35条预言的完整收录与验证分析。",
+      "keywords": "约翰提托,John Titor,时间旅行者,2036年,未来人,时间机器,预言验证,美国内战预言,IBM 5100",
+      "siteName": "约翰·提托预言",
+      "ogTitle": "约翰·提托预言全集 | John Titor Predictions",
+      "ogDescription": "来自2036年的时间旅行者约翰·提托的35条预言完整收录与验证分析。涵盖战争、科技、社会变迁等领域。",
+      "locale": "zh_CN",
+      "twitterDescription": "35条来自2036年时间旅行者约翰·提托的预言，含真实度验证。包括IBM 5100、美国内战、核战争等预言。"
+    },
+    "en": {
+      "htmlLang": "en",
+      "title": "John Titor Predictions - Time Traveler from 2036 | Full Archive & Verification",
+      "description": "John Titor posted on internet forums from 2000-2001 claiming to be a time traveler from 2036. Complete archive of 35 predictions covering civil war, nuclear conflict, technology, and social change, with real-world verification.",
+      "keywords": "John Titor,time traveler,2036,time travel,predictions,IBM 5100,civil war prediction,Titor predictions verified",
+      "siteName": "John Titor Predictions",
+      "ogTitle": "John Titor Predictions - Time Traveler from 2036",
+      "ogDescription": "35 predictions from self-proclaimed time traveler John Titor (2000-2001). Full archive with real-world verification.",
+      "locale": "en_US",
+      "twitterDescription": "35 predictions from John Titor, self-proclaimed time traveler from 2036. Verified: IBM 5100 capabilities. Failed: US civil war by 2005."
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "约翰·提托预言",
+      "alternateName": "John Titor Predictions",
+      "url": "https://pre.hilife.me/titor/",
+      "description": "来自2036年的时间旅行者约翰·提托的预言完整收录与验证",
+      "inLanguage": ["zh-CN", "en"]
+    }
+  ],
+  "theme": {
+    "bg": "#f2f3f0",
+    "white": "#fff",
+    "text": "#2d2d2d",
+    "text2": "#777",
+    "textLight": "#666",
+    "primary": "#4a6741",
+    "primaryDark": "#354d30",
+    "primaryBg": "#eef3ec",
+    "link": "#4a6741",
+    "border": "#dde0da",
+    "border2": "#bbc0b6",
+    "orange": "#d4880e",
+    "red": "#c04040",
+    "blue": "#4a7ab5",
+    "tagBg": "#eceee8"
+  },
+  "logo": {
+    "type": "image",
+    "file": "logo.svg",
+    "alt": "John Titor Predictions"
+  }
+}

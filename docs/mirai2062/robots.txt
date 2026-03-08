@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pre.hilife.me/mirai2062/sitemap.xml

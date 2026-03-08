@@ -1,0 +1,54 @@
+{
+  "zh": {
+    "siteTitle": "2062未来人预言",
+    "siteSubtitle": "日本2ch论坛穿越者（2010-2012）",
+    "navHome": "预言介绍",
+    "navAll": "预言全集",
+    "homeTitle": "2062未来人是谁？",
+    "homeIntro1": "2062未来人是2010年11月在日本匿名论坛2ch（现5ch）超自然板块出现的一位匿名发帖者。他自称来自2062年的日本，以问答形式回答了网友关于未来世界的大量提问。",
+    "homeIntro2": "这位发帖者最令人瞩目的一点是，他在2011年3月9日再次出现在论坛上——仅仅两天后，日本就发生了里氏9.0级东日本大地震和海啸，造成近两万人死亡。这一巧合使他在日本网络文化中广为人知。",
+    "homeIntro3": "2062未来人的预言涵盖日本国土变化、国际关系、科技发展、社会变迁等领域。他的回答通常简短含蓄，对某些问题以「无法回答」回避。本站整理了他的30条核心预言，并对已到期的预言进行了真实度评估。",
+    "coreMessage": "核心信息",
+    "coreQuote": "「自然灾害方面，我只能说一句：请做好准备。」",
+    "keyPoints": "关键时间节点",
+    "keyPointsList": [
+      "2010年11月 —— 首次在2ch超自然板发帖",
+      "2011年3月9日 —— 再次出现，两天后发生东日本大地震",
+      "2011年7月 —— 第三次出现，回答更多问题",
+      "2012年 —— 最后一次出现",
+      "2062年 —— 声称的出发年份"
+    ],
+    "sourceTitle": "数据来源",
+    "sourceList": [
+      "预言内容整理自2ch/5ch论坛存档帖子，经日文翻译整理",
+      "验证评价基于公开新闻报道和统计数据",
+      "编者观点不代表学术定论"
+    ]
+  },
+  "en": {
+    "siteTitle": "2062 Future Man",
+    "siteSubtitle": "Time Traveler from Japan's 2ch Forum (2010-2012)",
+    "navHome": "Background",
+    "navAll": "All Predictions",
+    "homeTitle": "Who is the 2062 Future Man?",
+    "homeIntro1": "The '2062 Future Man' (2062未来人) is an anonymous poster who appeared on Japan's 2ch (now 5ch) imageboard's occult board in November 2010. Claiming to be from Japan in the year 2062, he answered questions from netizens about the future world in a Q&A format.",
+    "homeIntro2": "Most remarkably, the poster reappeared on March 9, 2011 — just two days before the devastating magnitude 9.0 Tohoku earthquake and tsunami struck Japan, killing nearly 20,000 people. This coincidence made him a legendary figure in Japanese internet culture.",
+    "homeIntro3": "The 2062 Future Man's predictions cover Japan's territorial changes, international relations, technological developments, and social shifts. His answers were typically brief and cryptic, often declining to answer certain questions as 'cannot say.' This site compiles 30 of his core predictions and evaluates those whose deadlines have passed.",
+    "coreMessage": "Core Message",
+    "coreQuote": "\"Regarding natural disasters, I can only say one thing: please be prepared.\"",
+    "keyPoints": "Key Timeline",
+    "keyPointsList": [
+      "November 2010 —— First post on 2ch occult board",
+      "March 9, 2011 —— Reappeared, 2 days before Tohoku earthquake",
+      "July 2011 —— Third appearance, answered more questions",
+      "2012 —— Final appearance",
+      "2062 —— Year he claims to have departed from"
+    ],
+    "sourceTitle": "Data Sources",
+    "sourceList": [
+      "Predictions compiled from archived 2ch/5ch forum posts, translated from Japanese",
+      "Verification based on public news reports and statistical data",
+      "Editorial opinions do not represent academic consensus"
+    ]
+  }
+}
