@@ -1,0 +1,56 @@
+{
+  "zh": {
+    "siteTitle": "阿南德预言",
+    "siteSubtitle": "印度少年吠陀占星师（2006-）",
+    "navHome": "预言介绍",
+    "navAll": "预言全集",
+    "homeTitle": "阿南德是谁？",
+    "homeIntro1": "阿比吉亚·阿南德（Abhigya Anand）是来自印度卡纳塔克邦卡拉布拉吉的少年占星师。他自幼学习吠陀占星术（Jyotish Shastra），通过分析木星、土星、罗睺、计都等星体的运行位置来做出预测。",
+    "homeIntro2": "阿南德在2020年因一段2019年8月发布的YouTube视频而爆红——视频中他准确预测了将从2019年11月起出现一种全球性病毒。这段视频在新冠疫情期间传遍亚洲社交媒体，他因此被称为「印度神童」。他运营的YouTube频道「Conscience」拥有数百万订阅者。",
+    "homeIntro3": "阿南德的预测基于行星排列（特别是木星-土星合相、日月食周期），涵盖疫情、经济危机、地缘冲突、自然灾害等领域。部分预言得到了部分验证，但许多预测措辞模糊，可套用于多种情况。本站整理了他的30条核心预言，并对已到期的预言进行了真实度评估。",
+    "coreMessage": "核心信息",
+    "coreQuote": "「星相不会决定你的命运，它们只是指出可能的趋势。人类的自由意志和善行才是改变命运的关键。」",
+    "keyPoints": "关键时间节点",
+    "keyPointsList": [
+      "2019年8月 —— 发布预测全球疫情的YouTube视频",
+      "2020年4月 —— 预言视频在亚洲疯传，被称「印度神童」",
+      "2020年12月 —— 预测2021年2月将出现新灾难",
+      "2021-2023年 —— 持续发布基于吠陀占星的年度预测",
+      "2024-2025年 —— 预测经济动荡与地缘冲突加剧"
+    ],
+    "sourceTitle": "数据来源",
+    "sourceList": [
+      "预言内容整理自阿南德YouTube频道「Conscience」的公开视频",
+      "验证评价基于公开新闻报道和统计数据",
+      "编者观点不代表学术定论",
+      "站点图标采用吠陀太阳——阿南德以吠陀占星术（Jyotish）为预测基础，太阳是吠陀占星中最核心的天体符号"
+    ]
+  },
+  "en": {
+    "siteTitle": "Abhigya Anand Predictions",
+    "siteSubtitle": "Indian Teen Vedic Astrologer (2006-)",
+    "navHome": "Background",
+    "navAll": "All Predictions",
+    "homeTitle": "Who is Abhigya Anand?",
+    "homeIntro1": "Abhigya Anand is a teen astrologer from Kalaburagi, Karnataka, India. He has studied Vedic astrology (Jyotish Shastra) since childhood, making predictions based on the positions of Jupiter, Saturn, Rahu, Ketu, and other celestial bodies.",
+    "homeIntro2": "Anand went viral in 2020 when a YouTube video from August 2019 resurfaced, showing him accurately predicting a global virus outbreak starting in November 2019. The video spread across Asian social media during the COVID-19 pandemic, earning him the nickname 'Indian Prodigy.' His YouTube channel 'Conscience' has millions of subscribers.",
+    "homeIntro3": "Anand's predictions are based on planetary alignments (particularly Jupiter-Saturn conjunctions and eclipse cycles), covering pandemics, economic crises, geopolitical conflicts, and natural disasters. Some predictions have been partially verified, though many are worded vaguely enough to fit multiple scenarios. This site compiles 30 of his core predictions and evaluates those whose deadlines have passed.",
+    "coreMessage": "Core Message",
+    "coreQuote": "\"The stars do not determine your fate — they only indicate possible trends. Human free will and good deeds are the key to changing destiny.\"",
+    "keyPoints": "Key Timeline",
+    "keyPointsList": [
+      "August 2019 —— Published YouTube video predicting global pandemic",
+      "April 2020 —— Prediction video went viral across Asia, dubbed 'Indian Prodigy'",
+      "December 2020 —— Predicted new disaster in February 2021",
+      "2021-2023 —— Continued publishing annual Vedic astrology predictions",
+      "2024-2025 —— Predicted economic turbulence and escalating geopolitical tensions"
+    ],
+    "sourceTitle": "Data Sources",
+    "sourceList": [
+      "Predictions compiled from Anand's public YouTube channel 'Conscience'",
+      "Verification based on public news reports and statistical data",
+      "Editorial opinions do not represent academic consensus",
+      "Site icon: Vedic sun — Anand's predictions are based on Vedic astrology (Jyotish), and the sun is the most central celestial symbol in this tradition"
+    ]
+  }
+}

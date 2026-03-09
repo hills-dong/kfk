@@ -1,0 +1,65 @@
+{
+  "siteId": "mirai2062",
+  "answererName": "2062未来人",
+  "publishDate": "2010-11-14",
+  "baseUrl": "https://pre.hilife.me/mirai2062",
+  "defaultLang": "zh",
+  "languages": ["zh", "en"],
+  "meta": {
+    "zh": {
+      "htmlLang": "zh-CN",
+      "title": "2062未来人预言全集 - 日本2ch论坛穿越者预言与验证 | 2062 Future Man",
+      "description": "2062未来人于2010年在日本2ch论坛自称来自2062年，留下了关于日本大地震、国际局势、科技发展等30条预言的完整收录与验证分析。曾在311大地震前两天再次现身。",
+      "keywords": "2062未来人,2062年,未来人,2ch,时间旅行,日本预言,311地震预言,未来穿越者",
+      "siteName": "2062未来人预言",
+      "ogTitle": "2062未来人预言全集 | 2062 Future Man Predictions",
+      "ogDescription": "日本2ch论坛穿越者2062未来人的30条预言完整收录与验证分析。涵盖自然灾害、国际关系、科技发展等领域。",
+      "locale": "zh_CN",
+      "twitterDescription": "30条来自2062年穿越者的预言，含真实度验证。曾在311大地震前两天再次现身2ch论坛。"
+    },
+    "en": {
+      "htmlLang": "en",
+      "title": "2062 Future Man Predictions - Time Traveler from Japanese 2ch Forum | Full Archive & Verification",
+      "description": "The '2062 Future Man' appeared on Japan's 2ch forum in 2010 claiming to be from 2062. Complete archive of 30 predictions covering earthquakes, geopolitics, and technology, with real-world verification. Notably reappeared 2 days before the 2011 Tohoku earthquake.",
+      "keywords": "2062 Future Man,2062未来人,2ch time traveler,Japan predictions,Tohoku earthquake prediction,future man 2ch",
+      "siteName": "2062 Future Man Predictions",
+      "ogTitle": "2062 Future Man - Time Traveler from Japanese 2ch",
+      "ogDescription": "30 predictions from the 2062 Future Man who appeared on Japan's 2ch forum. Reappeared 2 days before the 2011 Tohoku earthquake.",
+      "locale": "en_US",
+      "twitterDescription": "30 predictions from Japan's 2062 Future Man. Reappeared on 2ch just 2 days before the 2011 Tohoku earthquake."
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "2062未来人预言",
+      "alternateName": "2062 Future Man Predictions",
+      "url": "https://pre.hilife.me/mirai2062/",
+      "description": "日本2ch论坛穿越者2062未来人的预言完整收录与验证",
+      "inLanguage": ["zh-CN", "en"]
+    }
+  ],
+  "theme": {
+    "bg": "#f0f2f5",
+    "white": "#fff",
+    "text": "#2a2e33",
+    "text2": "#7a7f88",
+    "textLight": "#636870",
+    "primary": "#2563a0",
+    "primaryDark": "#1a4670",
+    "primaryBg": "#edf3f9",
+    "link": "#2563a0",
+    "border": "#dce0e6",
+    "border2": "#b8bec8",
+    "orange": "#d4880e",
+    "red": "#c04040",
+    "blue": "#4a7ab5",
+    "tagBg": "#e8ebf0"
+  },
+  "logo": {
+    "type": "image",
+    "file": "logo.svg",
+    "alt": "2062未来人预言"
+  }
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 28" height="20">
+  <!-- Hourglass: top triangle + bottom triangle + neck + frame -->
+  <!-- Outer frame lines -->
+  <line x1="4" y1="3" x2="24" y2="3" stroke="#005518" stroke-width="2" stroke-linecap="round"/>
+  <line x1="4" y1="25" x2="24" y2="25" stroke="#005518" stroke-width="2" stroke-linecap="round"/>
+  <!-- Glass body (pre-composited colors, no opacity) -->
+  <polygon points="5.5,4.5 22.5,4.5 14,13" fill="#b8e2ba"/>
+  <polygon points="5.5,23.5 22.5,23.5 14,15" fill="#87cb8b"/>
+  <!-- Glass outline -->
+  <line x1="5.5" y1="4.5" x2="14" y2="13" stroke="#007722" stroke-width="1.3"/>
+  <line x1="22.5" y1="4.5" x2="14" y2="13" stroke="#007722" stroke-width="1.3"/>
+  <line x1="5.5" y1="23.5" x2="14" y2="15" stroke="#007722" stroke-width="1.3"/>
+  <line x1="22.5" y1="23.5" x2="14" y2="15" stroke="#007722" stroke-width="1.3"/>
+  <!-- Neck -->
+  <circle cx="14" cy="14" r="1.2" fill="#005518"/>
+  <!-- Falling sand stream -->
+  <line x1="14" y1="15" x2="14" y2="20" stroke="#005518" stroke-width="0.8"/>
+  <!-- Sand pile bottom -->
+  <polygon points="10,23.5 18,23.5 14,19" fill="#49ad50"/>
+  <!-- Site name -->
+  <text x="32" y="19" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="bold" fill="#005518" letter-spacing="1">KFK 2060</text>
+</svg>

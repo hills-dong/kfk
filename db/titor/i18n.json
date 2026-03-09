@@ -1,0 +1,56 @@
+{
+  "zh": {
+    "siteTitle": "约翰·提托预言",
+    "siteSubtitle": "来自2036年的时间旅行者（2000-2001）",
+    "navHome": "预言介绍",
+    "navAll": "预言全集",
+    "homeTitle": "约翰·提托是谁？",
+    "homeIntro1": "约翰·提托（John Titor）是2000年11月至2001年3月间在美国互联网论坛上出现的一个神秘人物。他自称是来自2036年的美国军人，被派回1975年执行任务——取回一台IBM 5100便携式计算机，途中在2000年短暂停留并与网友互动。",
+    "homeIntro2": "提托在Time Travel Institute论坛和Art Bell的BBS上发布了大量帖子，详细描述了他所使用的时间机器（通用电气C204型）的工作原理，基于埃弗雷特-惠勒多世界诠释的时间旅行理论，以及他所来自的2036年世界的面貌。",
+    "homeIntro3": "提托的预言中，最引人注目的是关于IBM 5100隐藏功能的准确描述、美国社会分裂和内战的预测，以及关于CERN微型黑洞的说法。他于2001年3月发布最后一条帖子后彻底消失。本站整理了他的35条核心预言，并对已到期的预言进行了真实度评估。",
+    "coreMessage": "核心信息",
+    "coreQuote": "「没有人能够预测未来。我所能告诉你们的，只是我所来自的那条时间线上发生过的事。你们的未来并不一定和我的过去相同。」",
+    "keyPoints": "关键时间节点",
+    "keyPointsList": [
+      "2000年11月 —— 首次在Time Travel Institute论坛发帖",
+      "2001年3月 —— 发布最后一条帖子后消失",
+      "2004-2005年 —— 预言美国内战开始（未应验）",
+      "2015年 —— 预言核战争爆发（未应验）",
+      "2036年 —— 提托声称的出发年份"
+    ],
+    "sourceTitle": "数据来源",
+    "sourceList": [
+      "预言内容整理自提托原始论坛帖子存档（<a href=\"https://en.wikipedia.org/wiki/John_Titor\" target=\"_blank\" rel=\"noopener\">Wikipedia</a>）",
+      "验证评价基于公开新闻报道和历史事实",
+      "编者观点不代表学术定论",
+      "站点图标采用时钟漩涡——提托最广为流传的形象与他描述的通用电气C204时间机器相关，同心圆环与指针象征时间旅行"
+    ]
+  },
+  "en": {
+    "siteTitle": "John Titor Predictions",
+    "siteSubtitle": "Time Traveler from 2036 (2000-2001)",
+    "navHome": "Background",
+    "navAll": "All Predictions",
+    "homeTitle": "Who is John Titor?",
+    "homeIntro1": "John Titor is the name used by a mysterious individual who posted on American internet forums from November 2000 to March 2001. He claimed to be a US soldier from 2036, sent back to 1975 to retrieve an IBM 5100 portable computer, who stopped briefly in the year 2000 to interact with internet users.",
+    "homeIntro2": "Titor posted extensively on the Time Travel Institute forum and Art Bell's BBS, describing in detail his time machine (General Electric C204 unit), a time travel theory based on the Everett-Wheeler many-worlds interpretation, and what the world of 2036 looked like in his timeline.",
+    "homeIntro3": "Among Titor's most notable claims were his accurate description of the IBM 5100's hidden capabilities, predictions of American social division and civil war, and statements about CERN creating micro black holes. He posted his last message in March 2001 and vanished completely. This site compiles 35 of his core predictions and evaluates those whose deadlines have passed.",
+    "coreMessage": "Core Message",
+    "coreQuote": "\"No one can predict the future. All I can tell you is what happened on my worldline. Your future does not have to be the same as my past.\"",
+    "keyPoints": "Key Timeline",
+    "keyPointsList": [
+      "November 2000 —— First post on Time Travel Institute forum",
+      "March 2001 —— Final post before disappearing",
+      "2004-2005 —— Predicted US civil war begins (did not happen)",
+      "2015 —— Predicted nuclear war (did not happen)",
+      "2036 —— Year Titor claims to have departed from"
+    ],
+    "sourceTitle": "Data Sources",
+    "sourceList": [
+      "Predictions compiled from archived Titor forum posts (<a href=\"https://en.wikipedia.org/wiki/John_Titor\" target=\"_blank\" rel=\"noopener\">Wikipedia</a>)",
+      "Verification based on public news reports and historical facts",
+      "Editorial opinions do not represent academic consensus",
+      "Site icon: clock vortex — Titor's most iconic imagery is tied to his GE C204 time machine; concentric rings and clock hands symbolize time travel"
+    ]
+  }
+}
