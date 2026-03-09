@@ -56,15 +56,17 @@ function parseSvgShapes(svgContent) {
       const fill = a.fill || 'none';
       const stroke = a.stroke || 'none';
       const sw = parseFloat(a['stroke-width'] || 0);
-      if (fill !== 'none') shapes.push({ type: 'circle', cx, cy, r, color: hexToRGB(fill) });
-      if (stroke !== 'none' && sw > 0) shapes.push({ type: 'ring', cx, cy, r, sw, color: hexToRGB(stroke) });
+      const op = parseFloat(a.opacity || 1);
+      if (fill !== 'none') shapes.push({ type: 'circle', cx, cy, r, color: hexToRGB(fill), opacity: op });
+      if (stroke !== 'none' && sw > 0) shapes.push({ type: 'ring', cx, cy, r, sw, color: hexToRGB(stroke), opacity: op });
     } else if (tag === 'line') {
       const x1 = parseFloat(a.x1 || 0), y1 = parseFloat(a.y1 || 0);
       const x2 = parseFloat(a.x2 || 0), y2 = parseFloat(a.y2 || 0);
       const stroke = a.stroke || 'none';
       const sw = parseFloat(a['stroke-width'] || 1);
       const linecap = a['stroke-linecap'] || 'butt';
-      if (stroke !== 'none') shapes.push({ type: 'line', x1, y1, x2, y2, sw, linecap, color: hexToRGB(stroke) });
+      const op = parseFloat(a.opacity || 1);
+      if (stroke !== 'none') shapes.push({ type: 'line', x1, y1, x2, y2, sw, linecap, color: hexToRGB(stroke), opacity: op });
     } else if (tag === 'rect') {
       const rx = parseFloat(a.x || 0), ry = parseFloat(a.y || 0);
       const rw = parseFloat(a.width || 0), rh = parseFloat(a.height || 0);
@@ -72,22 +74,25 @@ function parseSvgShapes(svgContent) {
       const fill = a.fill || 'none';
       const stroke = a.stroke || 'none';
       const sw = parseFloat(a['stroke-width'] || 0);
-      if (fill !== 'none') shapes.push({ type: 'rect', rx, ry, rw, rh, cr, color: hexToRGB(fill) });
-      if (stroke !== 'none' && sw > 0) shapes.push({ type: 'rect_stroke', rx, ry, rw, rh, cr, sw, color: hexToRGB(stroke) });
+      const op = parseFloat(a.opacity || 1);
+      if (fill !== 'none') shapes.push({ type: 'rect', rx, ry, rw, rh, cr, color: hexToRGB(fill), opacity: op });
+      if (stroke !== 'none' && sw > 0) shapes.push({ type: 'rect_stroke', rx, ry, rw, rh, cr, sw, color: hexToRGB(stroke), opacity: op });
     } else if (tag === 'polygon') {
       const pts = a.points.trim().split(/\s+/).map(p => p.split(',').map(Number));
       const fill = a.fill || '#000';
       const stroke = a.stroke || 'none';
       const sw = parseFloat(a['stroke-width'] || 0);
-      if (fill !== 'none') shapes.push({ type: 'polygon', pts, color: hexToRGB(fill) });
-      if (stroke !== 'none' && sw > 0) shapes.push({ type: 'poly_stroke', pts, sw, color: hexToRGB(stroke) });
+      const op = parseFloat(a.opacity || 1);
+      if (fill !== 'none') shapes.push({ type: 'polygon', pts, color: hexToRGB(fill), opacity: op });
+      if (stroke !== 'none' && sw > 0) shapes.push({ type: 'poly_stroke', pts, sw, color: hexToRGB(stroke), opacity: op });
     } else if (tag === 'path' && a.d) {
       const fill = a.fill || '#000';
       const stroke = a.stroke || 'none';
       const sw = parseFloat(a['stroke-width'] || 0);
+      const op = parseFloat(a.opacity || 1);
       const polyline = pathToPolyline(a.d);
-      if (fill !== 'none') shapes.push({ type: 'path', polyline, color: hexToRGB(fill) });
-      if (stroke !== 'none' && sw > 0) shapes.push({ type: 'path_stroke', polyline, sw, color: hexToRGB(stroke) });
+      if (fill !== 'none') shapes.push({ type: 'path', polyline, color: hexToRGB(fill), opacity: op });
+      if (stroke !== 'none' && sw > 0) shapes.push({ type: 'path_stroke', polyline, sw, color: hexToRGB(stroke), opacity: op });
     }
   }
   return shapes;
@@ -311,7 +316,7 @@ function buildFromSvg(svgPath) {
       for (const s of shapes) {
         const cov = shapeCoverage(s, lx, ly);
         if (cov <= 0) continue;
-        const sa = cov;
+        const sa = cov * (s.opacity !== undefined ? s.opacity : 1);
         const da = aa / 255;
         const oa = sa + da * (1 - sa);
         if (oa > 0) {
@@ -380,7 +385,7 @@ function buildKfkData() {
   return buf;
 }
 
-const customBuilders = { kfk: buildKfkData };
+const customBuilders = {};
 
 // ============================================================
 // PNG encoding

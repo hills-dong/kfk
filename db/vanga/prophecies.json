@@ -2,16 +2,16 @@
   "prophecies": [
     {
       "id": 1,
-      "cat": "war",
-      "q": "万加对美国发出警告",
-      "a": "「恐怖啊，恐怖！美国的兄弟将在钢铁之鸟的攻击下倒塌。丛林中的狼群将嚎叫。无辜者的鲜血将四处喷溅。」",
-      "q_en": "Vanga warned about America",
-      "a_en": "\"Horror, horror! The American brethren will fall after being attacked by the steel birds. The wolves will be howling in the bush. Innocent blood will gush.\"",
-      "year": 2001,
+      "cat": "politics",
+      "q": "万加对印度总理英迪拉·甘地发出警告",
+      "a": "「裙子会毁了她。我在烟火中看见一件橙黄色的裙子。」",
+      "q_en": "Vanga warned Indian PM Indira Gandhi",
+      "a_en": "\"The dress will destroy her. I see an orange-yellow dress in the smoke and fire.\"",
+      "year": 1984,
       "status": "verified",
-      "verdict_zh": "2001年9月11日，两架被劫持的客机（钢铁之鸟）撞击纽约世贸中心双子塔（美国兄弟），造成近3000人死亡。这是万加最广为人知的应验预言。",
-      "verdict_en": "On September 11, 2001, two hijacked planes ('steel birds') struck the Twin Towers ('American brethren') of the World Trade Center in New York, killing nearly 3,000 people. This is Vanga's most widely cited fulfilled prediction.",
-      "date": "1989"
+      "verdict_zh": "1984年10月31日，英迪拉·甘地遭锡克教卫士刺杀身亡时，身穿一件藏红色（橙黄色）纱丽。",
+      "verdict_en": "On October 31, 1984, Indira Gandhi was assassinated by her Sikh bodyguards. She was wearing a saffron-hued (orange-yellow) saree at the time of her death.",
+      "date": "1969"
     },
     {
       "id": 2,
@@ -28,6 +28,19 @@
     },
     {
       "id": 3,
+      "cat": "war",
+      "q": "万加对美国发出警告",
+      "a": "「恐怖啊，恐怖！美国的兄弟将在钢铁之鸟的攻击下倒塌。丛林中的狼群将嚎叫。无辜者的鲜血将四处喷溅。」",
+      "q_en": "Vanga warned about America",
+      "a_en": "\"Horror, horror! The American brethren will fall after being attacked by the steel birds. The wolves will be howling in the bush. Innocent blood will gush.\"",
+      "year": 2001,
+      "status": "verified",
+      "verdict_zh": "2001年9月11日，两架被劫持的客机（钢铁之鸟）撞击纽约世贸中心双子塔（美国兄弟），造成近3000人死亡。这是万加最广为人知的应验预言。",
+      "verdict_en": "On September 11, 2001, two hijacked planes ('steel birds') struck the Twin Towers ('American brethren') of the World Trade Center in New York, killing nearly 3,000 people. This is Vanga's most widely cited fulfilled prediction.",
+      "date": "1989"
+    },
+    {
+      "id": 4,
       "cat": "politics",
       "q": "万加曾预言美国第44任总统",
       "a": "「第44任美国总统将是一位非裔美国人。但他也将是最后一位总统。」",
@@ -37,19 +50,6 @@
       "status": "partial",
       "verdict_zh": "2008年巴拉克·奥巴马当选美国第44任总统，确实是首位非裔总统。但「最后一位总统」的说法并未应验，美国此后继续有新总统当选。",
       "verdict_en": "Barack Obama was elected 44th US president in 2008, indeed the first African-American president. However, the claim of being 'the last president' did not come true, as the US has continued to elect new presidents."
-    },
-    {
-      "id": 4,
-      "cat": "politics",
-      "q": "万加对印度总理英迪拉·甘地发出警告",
-      "a": "「裙子会毁了她。我在烟火中看见一件橙黄色的裙子。」",
-      "q_en": "Vanga warned Indian PM Indira Gandhi",
-      "a_en": "\"The dress will destroy her. I see an orange-yellow dress in the smoke and fire.\"",
-      "year": 1984,
-      "status": "verified",
-      "verdict_zh": "1984年10月31日，英迪拉·甘地遭锡克教卫士刺杀身亡时，身穿一件藏红色（橙黄色）纱丽。",
-      "verdict_en": "On October 31, 1984, Indira Gandhi was assassinated by her Sikh bodyguards. She was wearing a saffron-hued (orange-yellow) saree at the time of her death.",
-      "date": "1969"
     },
     {
       "id": 5,

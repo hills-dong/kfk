@@ -89,7 +89,7 @@
   },
   "logo": {
     "type": "image",
-    "file": "logo.png",
+    "file": "logo.svg",
     "alt": "KFK 2060"
   },
   "footer": {
