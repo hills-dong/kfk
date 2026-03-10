@@ -928,6 +928,27 @@ body.en span.site-link[data-lang="en"] { display: inline-flex; }
 
   fs.writeFileSync(path.join(DIST_DIR, 'index.html'), html, 'utf8');
   console.log('  Generated: docs/index.html');
+
+  // Generate root sitemap.xml (index page + all done sites)
+  const rootBase = 'https://seer100.com';
+  const today = new Date().toISOString().split('T')[0];
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+  sitemap += `  <url>\n    <loc>${rootBase}/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n`;
+  for (const s of sites) {
+    if (s.status === 'done' && s.url) {
+      const siteUrl = s.url.replace(/\/$/, '');
+      sitemap += `  <url>\n    <loc>${siteUrl}/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
+      sitemap += `  <url>\n    <loc>${siteUrl}/en/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+    }
+  }
+  sitemap += `</urlset>\n`;
+  fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemap, 'utf8');
+  console.log('  Generated: docs/sitemap.xml');
+
+  // Generate root robots.txt
+  const robotsTxt = `User-agent: *\nAllow: /\n\nSitemap: ${rootBase}/sitemap.xml\n`;
+  fs.writeFileSync(path.join(DIST_DIR, 'robots.txt'), robotsTxt, 'utf8');
+  console.log('  Generated: docs/robots.txt');
 }
 
 // ---------------------------------------------------------------------------
