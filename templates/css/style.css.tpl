@@ -463,10 +463,40 @@ main {
   z-index: 90;
 }
 
+.filter-bar-wrap {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.filter-bar-wrap::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 28px;
+  background: linear-gradient(to right, transparent, var(--white));
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+.filter-bar-wrap.scrolled-end::after {
+  opacity: 0;
+}
+
 .filter-bar {
   display: flex;
   gap: 4px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.filter-bar::-webkit-scrollbar {
+  display: none;
 }
 
 .filter-btn {
@@ -956,32 +986,6 @@ footer .disclaimer {
   .topic-header,
   .topic-body {
     padding: 16px;
-  }
-
-  .filter-bar {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .filter-bar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .filter-row {
-    position: relative;
-  }
-
-  .filter-row::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 24px;
-    background: linear-gradient(to right, transparent, var(--white));
-    pointer-events: none;
   }
 
   .prophecy-header {
