@@ -140,17 +140,28 @@ function renderList(searchOnly) {
     <div class="filter-section">
       <div class="filter-row">
         <span class="filter-label">${s('filterCategory')}:</span>
-        <div class="filter-bar">${catFilterHtml}</div>
+        <div class="filter-bar-wrap"><div class="filter-bar">${catFilterHtml}</div></div>
       </div>
       <div class="filter-row">
         <span class="filter-label">${s('filterStatus')}:</span>
-        <div class="filter-bar">${statusFilterHtml}</div>
+        <div class="filter-bar-wrap"><div class="filter-bar">${statusFilterHtml}</div></div>
       </div>
     </div>
     <div class="list-info">${s('resultCount').replace('{count}', `<span id="result-count">${filtered.length}</span>`)}</div>
     </div>
     <div class="prophecy-list" id="prophecy-list">${itemsHtml}</div>
   `;
+
+  // Filter scroll fade: hide gradient when scrolled to end
+  document.querySelectorAll('.filter-bar').forEach(function(bar) {
+    var wrap = bar.parentElement;
+    function checkScroll() {
+      var atEnd = bar.scrollLeft + bar.clientWidth >= bar.scrollWidth - 4;
+      wrap.classList.toggle('scrolled-end', atEnd);
+    }
+    bar.addEventListener('scroll', checkScroll);
+    checkScroll();
+  });
 }
 
 function setCat(cat) {

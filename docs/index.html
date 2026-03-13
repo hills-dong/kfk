@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>预言档案馆 - 97个预言系列完整收录与验证 | Seer100 Prophecy Archive</title>
 <meta name="description" content="收录97个预言系列、3054条预言的完整档案与验证分析。涵盖诺斯特拉达穆斯、推背图、巴巴万加、霍金、马斯克等古今中外预言家，科幻作家与未来学家的预测。 Complete archive of 97 prophecy series with 3054 predictions verified against reality. Covering Nostradamus, Tui Bei Tu, Baba Vanga, Hawking, Musk, and prophets across cultures and eras.">
 <meta name="keywords" content="预言,prophecy,诺斯特拉达穆斯,Nostradamus,推背图,Tui Bei Tu,巴巴万加,Baba Vanga,预言验证,prophecy verification,预言档案,Seer100,KFK,霍金,Hawking,推背图预言,未来预言">
@@ -108,6 +108,7 @@ body {
 .main-tabs {
   display: flex; gap: 0; margin: 0 auto 24px;
   max-width: 960px; padding: 0 20px; border-bottom: 1px solid var(--border);
+  background: var(--bg); position: sticky; top: 0; z-index: 10;
 }
 .main-tab {
   padding: 10px 24px; font-size: 15px; font-weight: 500; cursor: pointer;
@@ -122,12 +123,22 @@ body {
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
-/* Filters */
-.filters { margin-bottom: 20px; }
-.filter-group {
-  margin-bottom: 10px; display: flex; align-items: center;
+/* Filters — grid layout for aligned labels */
+.filters {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 6px 8px; margin-bottom: 20px;
 }
-.filter-label { font-size: 13px; color: var(--text2); white-space: nowrap; flex-shrink: 0; margin-right: 6px; }
+.filter-group { display: contents; }
+.filter-label { font-size: 13px; color: var(--text2); white-space: nowrap; align-self: center; }
+.filter-scroll-wrap {
+  position: relative; min-width: 0; overflow: hidden;
+}
+.filter-scroll-wrap::after {
+  content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 32px;
+  background: linear-gradient(to right, transparent, var(--bg));
+  pointer-events: none; z-index: 1; transition: opacity .2s;
+}
+.filter-scroll-wrap.scrolled-end::after { opacity: 0; }
 .filter-scroll {
   display: flex; flex-wrap: nowrap; gap: 6px; align-items: center;
   overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
@@ -212,15 +223,27 @@ body {
   .header h1 { font-size: 18px; }
   .header-logo { width: 24px; height: 24px; }
   .content { padding: 0 12px 48px; }
+  .main-tabs { padding: 0 12px; margin-bottom: 16px; }
   .main-tab { padding: 8px 16px; font-size: 14px; }
   .col-country, .col-count { display: none; }
   .col-name { min-width: 100px; }
   .sites-table th:nth-child(3), .sites-table th:nth-child(5) { display: none; }
   .upcoming-item { padding: 12px 14px; }
 }
+@media (max-width: 480px) {
+  .header .sep, .header p { display: none; }
+  .main-tab { padding: 8px 12px; font-size: 13px; }
+  .col-cat { display: none; }
+  .sites-table th:nth-child(2) { display: none; }
+  .sites-table td { padding: 8px 6px; }
+  .sites-table th { padding: 6px; }
+  .col-name { min-width: 0; }
+  .col-rate { font-size: 12px; }
+}
 @media (max-width: 375px) {
   .content { padding: 0 8px 40px; }
   .header { padding: 16px 8px 10px; }
+  .main-tabs { padding: 0 8px; }
 }
 @media (pointer: coarse) {
   .lang-switch { min-height: 36px; padding: 6px 16px; }
@@ -262,7 +285,7 @@ body.en span.site-link[data-lang="en"] { display: inline-flex; }
     <div class="filters">
       <div class="filter-group">
         <span class="filter-label"><span data-lang="zh">分类：</span><span data-lang="en">Category:</span></span>
-        <div class="filter-scroll">
+        <div class="filter-scroll-wrap"><div class="filter-scroll">
           <button type="button" class="filter-btn active" aria-pressed="true" data-filter-cat="all"><span data-lang="zh">全部</span><span data-lang="en">All</span></button>
           <button type="button" class="filter-btn" aria-pressed="false" data-filter-cat="religion"><span data-lang="zh">宗教预言</span><span data-lang="en">Religion</span> <span class="filter-count">25</span></button>
       <button type="button" class="filter-btn" aria-pressed="false" data-filter-cat="ancient-text"><span data-lang="zh">古代典籍</span><span data-lang="en">Ancient Text</span> <span class="filter-count">21</span></button>
@@ -274,11 +297,11 @@ body.en span.site-link[data-lang="en"] { display: inline-flex; }
       <button type="button" class="filter-btn" aria-pressed="false" data-filter-cat="pop-culture"><span data-lang="zh">流行文化</span><span data-lang="en">Pop Culture</span> <span class="filter-count">3</span></button>
       <button type="button" class="filter-btn" aria-pressed="false" data-filter-cat="internet"><span data-lang="zh">互联网预言</span><span data-lang="en">Internet</span> <span class="filter-count">2</span></button>
       <button type="button" class="filter-btn" aria-pressed="false" data-filter-cat="folk"><span data-lang="zh">民间传说</span><span data-lang="en">Folk</span> <span class="filter-count">1</span></button>
-        </div>
+        </div></div>
       </div>
       <div class="filter-group">
         <span class="filter-label"><span data-lang="zh">国家：</span><span data-lang="en">Country:</span></span>
-        <div class="filter-scroll">
+        <div class="filter-scroll-wrap"><div class="filter-scroll">
           <button type="button" class="filter-btn active" aria-pressed="true" data-filter-country="all"><span data-lang="zh">全部</span><span data-lang="en">All</span></button>
           <button type="button" class="filter-btn" aria-pressed="false" data-filter-country="US"><span data-lang="zh">美国</span><span data-lang="en">USA</span> <span class="filter-count">23</span></button>
       <button type="button" class="filter-btn" aria-pressed="false" data-filter-country="CN"><span data-lang="zh">中国</span><span data-lang="en">China</span> <span class="filter-count">20</span></button>
@@ -305,7 +328,7 @@ body.en span.site-link[data-lang="en"] { display: inline-flex; }
       <button type="button" class="filter-btn" aria-pressed="false" data-filter-country="CH"><span data-lang="zh">瑞士</span><span data-lang="en">Switzerland</span> <span class="filter-count">1</span></button>
       <button type="button" class="filter-btn" aria-pressed="false" data-filter-country="AT"><span data-lang="zh">奥地利</span><span data-lang="en">Austria</span> <span class="filter-count">1</span></button>
       <button type="button" class="filter-btn" aria-pressed="false" data-filter-country="KR"><span data-lang="zh">韩国</span><span data-lang="en">South Korea</span> <span class="filter-count">1</span></button>
-        </div>
+        </div></div>
       </div>
     </div>
     <div class="site-count">
@@ -1594,6 +1617,16 @@ body.en span.site-link[data-lang="en"] { display: inline-flex; }
       var href = isEn ? row.dataset.hrefEn : row.dataset.hrefZh;
       if (href) window.open(href, '_blank', 'noopener');
     });
+  });
+
+  // Filter scroll fade: hide gradient when scrolled to end
+  document.querySelectorAll('.filter-scroll').forEach(function(el) {
+    function checkScroll() {
+      var atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+      el.parentElement.classList.toggle('scrolled-end', atEnd);
+    }
+    el.addEventListener('scroll', checkScroll);
+    checkScroll();
   });
 })();
 </script>

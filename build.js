@@ -551,7 +551,7 @@ function buildIndex() {
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>${seoTitle}</title>
 <meta name="description" content="${escapeHtml(seoDesc)}">
 <meta name="keywords" content="${seoKeywords}">
@@ -650,6 +650,7 @@ body {
 .main-tabs {
   display: flex; gap: 0; margin: 0 auto 24px;
   max-width: 960px; padding: 0 20px; border-bottom: 1px solid var(--border);
+  background: var(--bg); position: sticky; top: 0; z-index: 10;
 }
 .main-tab {
   padding: 10px 24px; font-size: 15px; font-weight: 500; cursor: pointer;
@@ -664,12 +665,22 @@ body {
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
-/* Filters */
-.filters { margin-bottom: 20px; }
-.filter-group {
-  margin-bottom: 10px; display: flex; align-items: center;
+/* Filters — grid layout for aligned labels */
+.filters {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 6px 8px; margin-bottom: 20px;
 }
-.filter-label { font-size: 13px; color: var(--text2); white-space: nowrap; flex-shrink: 0; margin-right: 6px; }
+.filter-group { display: contents; }
+.filter-label { font-size: 13px; color: var(--text2); white-space: nowrap; align-self: center; }
+.filter-scroll-wrap {
+  position: relative; min-width: 0; overflow: hidden;
+}
+.filter-scroll-wrap::after {
+  content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 32px;
+  background: linear-gradient(to right, transparent, var(--bg));
+  pointer-events: none; z-index: 1; transition: opacity .2s;
+}
+.filter-scroll-wrap.scrolled-end::after { opacity: 0; }
 .filter-scroll {
   display: flex; flex-wrap: nowrap; gap: 6px; align-items: center;
   overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
@@ -754,15 +765,27 @@ body {
   .header h1 { font-size: 18px; }
   .header-logo { width: 24px; height: 24px; }
   .content { padding: 0 12px 48px; }
+  .main-tabs { padding: 0 12px; margin-bottom: 16px; }
   .main-tab { padding: 8px 16px; font-size: 14px; }
   .col-country, .col-count { display: none; }
   .col-name { min-width: 100px; }
   .sites-table th:nth-child(3), .sites-table th:nth-child(5) { display: none; }
   .upcoming-item { padding: 12px 14px; }
 }
+@media (max-width: 480px) {
+  .header .sep, .header p { display: none; }
+  .main-tab { padding: 8px 12px; font-size: 13px; }
+  .col-cat { display: none; }
+  .sites-table th:nth-child(2) { display: none; }
+  .sites-table td { padding: 8px 6px; }
+  .sites-table th { padding: 6px; }
+  .col-name { min-width: 0; }
+  .col-rate { font-size: 12px; }
+}
 @media (max-width: 375px) {
   .content { padding: 0 8px 40px; }
   .header { padding: 16px 8px 10px; }
+  .main-tabs { padding: 0 8px; }
 }
 @media (pointer: coarse) {
   .lang-switch { min-height: 36px; padding: 6px 16px; }
@@ -804,17 +827,17 @@ body.en span.site-link[data-lang="en"] { display: inline-flex; }
     <div class="filters">
       <div class="filter-group">
         <span class="filter-label"><span data-lang="zh">分类：</span><span data-lang="en">Category:</span></span>
-        <div class="filter-scroll">
+        <div class="filter-scroll-wrap"><div class="filter-scroll">
           <button type="button" class="filter-btn active" aria-pressed="true" data-filter-cat="all"><span data-lang="zh">全部</span><span data-lang="en">All</span></button>
           ${catButtons}
-        </div>
+        </div></div>
       </div>
       <div class="filter-group">
         <span class="filter-label"><span data-lang="zh">国家：</span><span data-lang="en">Country:</span></span>
-        <div class="filter-scroll">
+        <div class="filter-scroll-wrap"><div class="filter-scroll">
           <button type="button" class="filter-btn active" aria-pressed="true" data-filter-country="all"><span data-lang="zh">全部</span><span data-lang="en">All</span></button>
           ${countryButtons}
-        </div>
+        </div></div>
       </div>
     </div>
     <div class="site-count">
@@ -921,6 +944,16 @@ body.en span.site-link[data-lang="en"] { display: inline-flex; }
       var href = isEn ? row.dataset.hrefEn : row.dataset.hrefZh;
       if (href) window.open(href, '_blank', 'noopener');
     });
+  });
+
+  // Filter scroll fade: hide gradient when scrolled to end
+  document.querySelectorAll('.filter-scroll').forEach(function(el) {
+    function checkScroll() {
+      var atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+      el.parentElement.classList.toggle('scrolled-end', atEnd);
+    }
+    el.addEventListener('scroll', checkScroll);
+    checkScroll();
   });
 })();
 </script>
